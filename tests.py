@@ -1,23 +1,30 @@
+from server import app
 from client import get_employees
 
 
 def test_add_employee():
-	pass
+    response = client.post("/employees",json={"name": "Employee_Name","title": "Employee_Title","salary": 30000})
+    assert response.status_code == 200
+    assert response.json()['testName']['title'] == 'Employee_Name'
+    assert response.json()['testName']['salary'] == 30000
 
 
 def test_delete_inexistent_employee():
-	pass
+    response = client.delete("/employees",json={"name": "Non_Existing_Employee"})
+    assert response.status_code == 200
 
 
 def test_delete_employee():
-	pass
+    response = client.delete("/employees",json={"name": "XXX"})		# XXX is to be replaced by the Name of the Employee to Delete
+    assert response.status_code == 200
 
 
 def test_add_employee_with_existing_id():
-	pass
+    response = client.post("/employees",json={"name": "Employee_Name","title": "Employee_Title","salary": 30000})
+    assert response.status_code == 200
 
 
 def test_get_all_employees():
-	employees = get_employees()
-	assert employees[0].name == "Menny"
-	assert employees[1].title == "Developer"
+    response = client.get("/employees")
+    assert response.status_code == 200
+    print(f"Response contents are- {response.content}")
