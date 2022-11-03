@@ -24,8 +24,9 @@ def test_add_employee_with_existing_id():
     response = client.post("/employees",json={"name": "Employee_Name","title": "Employee_Title","salary": 30000})
     assert response.status_code == 200
     
+    
 def test_add_employee_with_empty_data():
-    response = client.post("/employees",son={}    )
+    response = client.post("/employees",json={}    )
     assert response.status_code == 400                              # Error reponse code for mandatory fields missing   
 
     
