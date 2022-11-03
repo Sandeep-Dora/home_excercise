@@ -2,5 +2,9 @@
     "Menny": {"id": 1, "title": "manager", "salary": 20000},
     "Yossi": {"id": 2, "title": "developer", "salary": 15000},
     "Monica": {"id": 3, "title": "developer", "salary": 17000},
-    "Lee": {"id":  5, "title": "secretary", "salary": 8000}
+    "Lee": {"id":  5, "title": "secretary", "salary": 8000},
+    "Employee_Name": {"id":  111, "title": "Employee_Title", "salary": 30000},
+    "Alfa": {"id":  222, "title": "Alfa_Title", "salary": 40000},
+    "Beta": {"id":  333, "title": "Beta_Title", "salary": 50000},
+    "Gama": {"id":  444, "title": "Gama_Title", "salary": 60000}   
 }
