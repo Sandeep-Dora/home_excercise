@@ -1,1 +1,5 @@
-
+1) The existing code will not generate unique id's all the time as it has some limitation by the range. So I have modified to generate a unique id's always
+2) Added exception handling steps for "delete employee" functionality and ui improvements
+3) Added logic for "add_employee" and "delete employee"
+4) Added test logic into given test cases 
+5) Added addiotional methods for new test cases
